@@ -983,9 +983,9 @@
     "restore": {
       "projectUniqueName": "AssessAutomation",
       "projectName": "AssessAutomation",
-      "projectPath": "C:\\Revature\\Rev\\week7\\assessment\\AssessAutomation\\.local",
+      "projectPath": "C:\\Revature\\ConnerKnight_Automation_Challenge1\\AssessAutomation\\.local",
       "packagesPath": "C:\\Users\\Conner\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\Rev\\week7\\assessment\\AssessAutomation\\.local"
+      "outputPath": "C:\\Revature\\ConnerKnight_Automation_Challenge1\\AssessAutomation\\.local"
     },
     "frameworks": {
       "net461": {
