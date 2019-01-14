@@ -435,7 +435,7 @@
                                           <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="Hi there" DisplayName="Send SMTP Mail Message" Email="farterjr@gmail.com" EnableSSL="True" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="chronosphere" Port="465" SecureConnection="SslOnConnect" Server="smtp.gmail.com" Subject="Welcome" To="[row(&quot;email&quot;).toString]">
+                                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="Hi there" DisplayName="Send SMTP Mail Message" Email="farterjr@gmail.com" EnableSSL="True" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="chronosphere" Port="465" SecureConnection="SslOnConnect" Server="smtp.gmail.com" Subject="[&quot;Welcome &quot; + row(&quot;FirstName&quot;).toString + &quot; &quot; + row(&quot;LastName&quot;).toString]" To="farterjr@gmail.com">
                                         <ui:SendMail.Files>
                                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                                         </ui:SendMail.Files>
@@ -479,7 +479,7 @@
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
-    <sads:DebugSymbol.Symbol>d0lDOlxSZXZhdHVyZVxDb25uZXJLbmlnaHRfQXV0b21hdGlvbl9DaGFsbGVuZ2UxXEFzc2Vzc0F1dG9tYXRpb25cTWFpbi54YW1sgAFCA+MDDwIBAUgJSPQRAwGgAUsNygIYAgFEzQIR2AIsAgE82wIVxAMgAgEKxwMZ0gM0AgECSCZIMQMBoQFMD8kCIAIBRc0CoAHNAq8BAgFD0wIX1QIiAgE93AIXwwMpAgELxwO0AccDwwECAQnNAx/PAyoCAQNMxQFM6QEDAZ8BUhXGAiACAUbUAhnUAswBAgE+3AK0AtwC8AICATviAh3AAygCAQzOAyHOA9QBAgEEVEVUSAIBR1YXxAIfAgFJxQIXxQKeAgIBSNQCxQHUAskBAgFC1AJJ1AJUAgFA1AKtAdQCtwECAT/kAk3kAlACAQ3mAh++Ay8CAQ+/Ax+/A6ECAgEOzgPNAc4D0QECAQjOA1HOA1wCAQbOA7UBzgO/AQIBBWMZwwIkAgFMYipiPQIBSuYCUOYCWwIBOewCJbsDMAIBEGgbcysDAZwBdBuhASsDAZkBogEbyQErAwGWAcoBG9EBLAMBkgHSARvZASkDAY4B2gEb4QEpAwGKAeIBG+kBJAMBhQHqARvxASQDAYAB8gEb+QEkAgF7+gEbgQIpAgF3ggIbiQIkAgFzigIbkQIkAgFukgIbkgKBAQIBa5MCG5oCKQIBZ5sCG6ICKQIBY6MCG6oCJAIBX6sCG6sClQICAVSsAhu6AiYCAVK7AhvCAiQCAU3tAifxAjUCATbyAif2AjUCATP3Aif7AjUCATD8AieAAzUCAS2BAyeFAzUCASqGAyeKAzUCASeLAyePAzUCASSQAyeeAzICASKfAyemAzACAR+nAyetAzcCAR6uAye1AzACARm2Aye6AzUCARFozgFo1gEDAZ0Bca4BcdcBAwGeAXTMAXTWAQMBmgGfAa4BnwHVAQMBmwGiAcwBogHbAQMBlwHHAa4BxwHVAQMBmAHMAa4BzAHeAQMBlQHPAUfPAVcDAZMB1wFH1wFQAwGPAdQBrgHUAd4BAwGRAd8BR98BVAMBiwHcAa4B3AHSAQMBjQHnAUjnAWEDAYgB5AFJ5AFUAwGGAe8BRu8BVAMBgwHsAUfsAVUDAYEB9wFG9wFUAgF+9AFH9AFUAgF8/wFH/wFRAgF4/AGuAfwB0gECAXqHAkiHApUBAgF2hAJJhAJTAgF0jwJGjwJTAgFxjAJHjAJRAgFvkgJykgJ+AgFsmAJHmAJXAgFolQKuAZUC3QECAWqgAkegAlMCAWSdAq4BnQLrAgIBZqgCRqgCeAIBYqUCR6UCUwIBYKsCvQGrAsgBAgFdqwJGqwKyAQIBVbgCrgG4AtkBAgFTwAJFwAJVAgFQvQJGvQJSAgFO7wK6Ae8C6AECATjtAsQC7QLrAgIBN/QCugH0AucBAgE18gLDAvIC6QICATT5AroB+QLkAQIBMvcCwAL3AuMCAgEx/gK6Af4C5AECAS/8AsAC/ALjAgIBLoMDugGDA+YBAgEsgQPCAoED5wICASuIA7oBiAPqAQIBKYYDxgKGA/ACAgEojQO6AY0D4wECASaLA78CiwPsAgIBJZwDugGcA+cBAgEjpANSpANdAgEhoQNToQNiAgEgswNRswNeAgEcsANSsANbAgEatgOuA7YD0QMCARi2A6IBtgOsAQIBF7YDoQO2A6oDAgEWtgPYAbYD7AECARW2A9sCtgPgAgIBFLYDiAO2A5gDAgETtgPHArYD1QICARI=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0lDOlxSZXZhdHVyZVxDb25uZXJLbmlnaHRfQXV0b21hdGlvbl9DaGFsbGVuZ2UxXEFzc2Vzc0F1dG9tYXRpb25cTWFpbi54YW1sgAFCA+MDDwIBAUgJSPQRAwGgAUsNygIYAgFEzQIR2AIsAgE82wIVxAMgAgEKxwMZ0gM0AgECSCZIMQMBoQFMD8kCIAIBRc0CoAHNAq8BAgFD0wIX1QIiAgE93AIXwwMpAgELxwO0AccDwwECAQnNAx/PAyoCAQNMxQFM6QEDAZ8BUhXGAiACAUbUAhnUAswBAgE+3AK0AtwC8AICATviAh3AAygCAQzOAyHOA9QBAgEEVEVUSAIBR1YXxAIfAgFJxQIXxQKeAgIBSNQCxQHUAskBAgFC1AJJ1AJUAgFA1AKtAdQCtwECAT/kAk3kAlACAQ3mAh++Ay8CAQ+/Ax+/A6ECAgEOzgPNAc4D0QECAQjOA1HOA1wCAQbOA7UBzgO/AQIBBWMZwwIkAgFMYipiPQIBSuYCUOYCWwIBOewCJbsDMAIBEGgbcysDAZwBdBuhASsDAZkBogEbyQErAwGWAcoBG9EBLAMBkgHSARvZASkDAY4B2gEb4QEpAwGKAeIBG+kBJAMBhQHqARvxASQDAYAB8gEb+QEkAgF7+gEbgQIpAgF3ggIbiQIkAgFzigIbkQIkAgFukgIbkgKBAQIBa5MCG5oCKQIBZ5sCG6ICKQIBY6MCG6oCJAIBX6sCG6sClQICAVSsAhu6AiYCAVK7AhvCAiQCAU3tAifxAjUCATbyAif2AjUCATP3Aif7AjUCATD8AieAAzUCAS2BAyeFAzUCASqGAyeKAzUCASeLAyePAzUCASSQAyeeAzICASKfAyemAzACAR+nAyetAzcCAR6uAye1AzACARm2Aye6AzUCARFozgFo1gEDAZ0Bca4BcdcBAwGeAXTMAXTWAQMBmgGfAa4BnwHVAQMBmwGiAcwBogHbAQMBlwHHAa4BxwHVAQMBmAHMAa4BzAHeAQMBlQHPAUfPAVcDAZMB1wFH1wFQAwGPAdQBrgHUAd4BAwGRAd8BR98BVAMBiwHcAa4B3AHSAQMBjQHnAUjnAWEDAYgB5AFJ5AFUAwGGAe8BRu8BVAMBgwHsAUfsAVUDAYEB9wFG9wFUAgF+9AFH9AFUAgF8/wFH/wFRAgF4/AGuAfwB0gECAXqHAkiHApUBAgF2hAJJhAJTAgF0jwJGjwJTAgFxjAJHjAJRAgFvkgJykgJ+AgFsmAJHmAJXAgFolQKuAZUC3QECAWqgAkegAlMCAWSdAq4BnQLrAgIBZqgCRqgCeAIBYqUCR6UCUwIBYKsCvQGrAsgBAgFdqwJGqwKyAQIBVbgCrgG4AtkBAgFTwAJFwAJVAgFQvQJGvQJSAgFO7wK6Ae8C6AECATjtAsQC7QLrAgIBN/QCugH0AucBAgE18gLDAvIC6QICATT5AroB+QLkAQIBMvcCwAL3AuMCAgEx/gK6Af4C5AECAS/8AsAC/ALjAgIBLoMDugGDA+YBAgEsgQPCAoED5wICASuIA7oBiAPqAQIBKYYDxgKGA/ACAgEojQO6AY0D4wECASaLA78CiwPsAgIBJZwDugGcA+cBAgEjpANSpANdAgEhoQNToQNiAgEgswNRswNeAgEcsANSsANbAgEatgOYBLYDrAQCARi2A6IBtgOsAQIBF7YDoQO2A5QEAgEWtgPYAbYD7AECARW2A9sCtgPgAgIBFLYDiAO2A5gDAgETtgPHArYD1QICARI=</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -567,7 +567,7 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="CommentOut_1" sap:VirtualizedContainerService.HintSize="416,319.2" />
       <sap2010:ViewStateData Id="Assign_12" sap:VirtualizedContainerService.HintSize="416,60" />
-      <sap2010:ViewStateData Id="SendMail_1" sap:VirtualizedContainerService.HintSize="314.4,146.4" />
+      <sap2010:ViewStateData Id="SendMail_1" sap:VirtualizedContainerService.HintSize="416,146.4" />
       <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="438.4,2204">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -576,7 +576,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="ForEachRow_1" sap:VirtualizedContainerService.HintSize="468.8,2352.8" />
-      <sap2010:ViewStateData Id="CloseWindow_3" sap:VirtualizedContainerService.HintSize="367.2,107.2" />
+      <sap2010:ViewStateData Id="CloseWindow_3" sap:VirtualizedContainerService.HintSize="468.8,107.2" />
       <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="491.2,2624.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -585,7 +585,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="505.6,2772" />
-      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="200,52.8">
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="528,2896.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -600,7 +600,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ExcelApplicationScope_2" sap:VirtualizedContainerService.HintSize="414.4,322.4">
+      <sap2010:ViewStateData Id="ExcelApplicationScope_2" sap:VirtualizedContainerService.HintSize="200,52.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

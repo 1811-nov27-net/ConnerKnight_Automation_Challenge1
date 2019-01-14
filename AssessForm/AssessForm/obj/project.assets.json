@@ -12954,11 +12954,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Revature\\Rev\\week7\\assessment\\AssessForm\\AssessForm\\AssessForm.csproj",
+      "projectUniqueName": "C:\\Revature\\ConnerKnight_Automation_Challenge1\\AssessForm\\AssessForm\\AssessForm.csproj",
       "projectName": "AssessForm",
-      "projectPath": "C:\\Revature\\Rev\\week7\\assessment\\AssessForm\\AssessForm\\AssessForm.csproj",
+      "projectPath": "C:\\Revature\\ConnerKnight_Automation_Challenge1\\AssessForm\\AssessForm\\AssessForm.csproj",
       "packagesPath": "C:\\Users\\Conner\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\Rev\\week7\\assessment\\AssessForm\\AssessForm\\obj\\",
+      "outputPath": "C:\\Revature\\ConnerKnight_Automation_Challenge1\\AssessForm\\AssessForm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
